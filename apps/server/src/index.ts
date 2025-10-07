@@ -36,4 +36,9 @@ app.get("/", (c) => {
 	return c.text("OK");
 });
 
-export default app;
+const port = Number(process.env.PORT) || 3020;
+
+export default {
+	port,
+	fetch: app.fetch,
+};
